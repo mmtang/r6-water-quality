@@ -1,0 +1,17 @@
+﻿SiteCode,Analyte,Type,ObjClass,Label,Value,Upper,Lower,Unit,Comment
+637SUS001,"Phosphorus as P, Total",Max,Annual Average,Site-specific Objective (Annual Average),0.25,,,mg/L,
+637SUS001,Total Dissolved Solids,Max,Annual Average,Site-specific Objective (Annual Average),185,,,mg/L,
+637SUS001,"Boron, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),0.1,,,mg/L,
+637SUS001,"Chloride, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),8,,,mg/L,
+637SUS001,"Sulfate, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),25,,,mg/L,
+637SUS001,"Nitrogen, Total (Calculated)",Max,Annual Average,Site-specific Objective (Annual Average),0.65,,,mg/L,
+637SUS001,"Turbidity, Total",Max,MCL,Maximum Contaminant Level,5,,,NTU,
+637SUS001,"Oxygen, Dissolved, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,3,,,mg/L,Objective is > 3.0
+637SUS001,"Alkalinity as CaCO3, Total",Min,WQC,Water Quality Criteria (Minimum Hardness),20,,,mg/L,
+637SUS001,"Oxygen, Saturation, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,80,,,%,Objective is > 80
+637SUS001,"Coliform, Fecal (Single Sample)",Max,Basin Plan WQO,Basin Plan Water Quality Objective,40,,,cfu/100 mL,
+637SUS001,"Coliform, Fecal (Geometric Mean)",Max,Basin Plan WQO,Basin Plan Water Quality Objective,20,,,cfu/100 mL,
+637SUS001,E. coli (Single Sample),Max,STV,Statistical Threshold Value,320,,,cfu/100 mL,
+637SUS001,E. coli (Geometric Mean),Max,WQO,Water Quality Objective,100,,,cfu/100 mL,
+637SUS001,"Fluoride, Dissolved",Max,MCL,Maximum Contaminant Level,2,,,mg/L,
+637SUS001,pH,Range,Range,pH Range,8.5,8.5,6.5,,

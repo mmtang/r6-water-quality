@@ -1,22 +1,68 @@
-.App {
-  text-align: center;
+.navbar {
+  background-color: #046b99 !important;
+  height: 68px;
+  border-bottom: 5px solid #FDB81E;
+  padding: 0 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.nav-logo {
+  display: inline;
+  height: 42px;
+}
+
+.nav-text {
+  padding: 0 10px 0 15px;
+  display: none;
+}
+
+#map-container {
+  display: block;
+  padding: 0;
+  border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+}
+
+#map {
+  padding: 0;
+}
+
+#right {
+  /* subtract navbar height; otherwise, div will go off screen */
+  height: calc(100vh - 68px);
+  overflow: hidden;
+  overflow-y: scroll; 
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  body {
+      padding-top: 68px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .nav-text {
+      display: inline;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }

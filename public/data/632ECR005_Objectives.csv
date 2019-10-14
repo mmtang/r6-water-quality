@@ -1,0 +1,18 @@
+﻿SiteCode,Analyte,Type,ObjClass,Label,Value,Upper,Lower,Unit,Comment
+632ECR005,Total Dissolved Solids,Max,Annual Average,Site-specific Objective (Annual Average),80,,,mg/L,
+632ECR005,"Phosphorus, Total",Max,Annual Average,Site-specific Objective (Annual Average),0.02,,,mg/L,
+632ECR005,"Turbidity, Total",Max,MCL,Maximum Contaminant Level,5,,,NTU,
+632ECR005,"Sulfate, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),4,,,mg/L,
+632ECR005,Specific Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+632ECR005,pH,Range,Range,pH Range,8.5,8.5,6.5,,
+632ECR005,"Oxygen, Saturation, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,80,,,%,Objective is > 80
+632ECR005,"Oxygen, Dissolved, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,3,,,mg/L,Objective is > 3.0
+632ECR005,"Nitrogen, Total",Max,Annual Average,Site-specific Objective (Annual Average),0.2,,,mg/L,
+632ECR005,"Fluoride, Dissolved",Max,MCL,Maximum Contaminant Level,2,,,mg/L,
+632ECR005,Electrical Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+632ECR005,"Chloride, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),4,,,mg/L,
+632ECR005,"Boron, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),0.12,,,mg/L,
+632ECR005,"Alkalinity as CaCO3, Total",Min,Water Quality Criteria,Water Quality Criteria (Minimum Hardness),20,,,mg/L,Objective is > 20
+632ECR005,E. coli (Single Sample),Max,Statistical Threshold Value,Statistical Threshold Value,320,,,cfu/100mL,
+632ECR005,E. coli (Geometric Mean),Max,Geometric Mean Objective,Geometric Mean Objective,100,,,cfu/100mL,
+632ECR005,"Coliform, Fecal (Single Sample)",Max,Ten Percent Exceedance Value,Ten Percent Exceedance Value,40,,,cfu/100mL,

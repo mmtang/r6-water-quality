@@ -1,0 +1,19 @@
+﻿SiteCode,Analyte,Type,ObjClass,Label,Value,Upper,Lower,Unit,Comment
+635TRK002,"Phosphorus, Total",Max,Monthly Mean,Site-specific Objective (Monthly Mean),0.05,,,mg/L,
+635TRK002,Total Dissolved Solids,Max,Monthly Mean,Site-specific Objective (Monthly Mean),75,,,mg/L,
+635TRK002,"Alkalinity as CaCO3, Total",Min,WQC Minimum Hardness,Water Quality Criteria (Minimum Hardness),20,,,mg/L,
+635TRK002,"Boron, Total",Max,Monthly Mean,Site-specific Objective (Monthly Mean),1,,,mg/L,
+635TRK002,"Chloride, Dissolved",Max,Monthly Mean,Site-specific Objective (Monthly Mean),8,,,mg/L,
+635TRK002,Electrical Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+635TRK002,"Fluoride, Dissolved",Max,MCL,Maximum Contaminant Level,2,,,mg/L,
+635TRK002,"Nitrogen, Total",Max,Monthly Mean,Site-specific Objective (Monthly Mean),0.4,,,mg/L,
+635TRK002,"Oxygen, Dissolved, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,3,,,mg/L,Objective is > 3.0
+635TRK002,"Oxygen, Saturation, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,80,,,%,Objective is > 80
+635TRK002,pH,Range,Range,pH Range,8.5,8.5,6.5,,
+635TRK002,Specific Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+635TRK002,"Sulfate, Dissolved",Max,Monthly Mean,Site-specific Objective (Monthly Mean),5,,,mg/L,
+635TRK002,"Turbidity, Total",Max,Monthly Mean,Site-specific Objective (Monthly Mean),3,,,NTU,
+635TRK002,Total Suspended Solids,Max,Annual Average,Site-specific Objective (Annual Average),15,,,mg/L,
+635TRK002,E. coli (Single Sample),Max,Statistical Threshold Value,Statistical Threshold Value,320,,,cfu/100mL,
+635TRK002,E. coli (Geometric Mean),Max,Geometric Mean Objective,Geometric Mean Objective,100,,,cfu/100mL,
+635TRK002,"Coliform, Fecal (Single Sample)",Max,Ten Percent Exceedance Value,Ten Percent Exceedance Value,40,,,cfu/100mL,

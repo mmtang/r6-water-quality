@@ -1,0 +1,18 @@
+﻿SiteCode,Analyte,Type,ObjClass,Label,Value,Upper,Lower,Unit,Comment
+630EWK001,Total Dissolved Solids,Max,Annual Average,Site-specific Objective (Annual Average),145,,,mg/L,
+630EWK001,"Phosphorus, Total",Max,Annual Average,Site-specific Objective (Annual Average),0.06,,,mg/L,
+630EWK001,"Turbidity, Total",Max,MCL,Maximum Contaminant Level,5,,,NTU,
+630EWK001,Total Suspended Solids,Max,Nevada Water Quality Standard,Nevada Water Quality Standard,30,,,mg/L,Objective is <30
+630EWK001,"Sulfate, Dissolved",Max,MCL,Maximum Contaminant Level,250,,,mg/L,
+630EWK001,Specific Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+630EWK001,pH,Range,Range,pH Range,8.5,8.5,6.5,,
+630EWK001,"Oxygen, Saturation, Total",Min,Basin Plan WQO,Basin Plan Water Quality Objective,80,,,%,Objective is >80
+630EWK001,"Oxygen, Dissolved, Total",Min,1-Day Concentration Minimum,1-Day Concentration Minimum,8,,,mg/L,
+630EWK001,"Nitrogen, Total",Max,Annual Average,Site-specific Objective (Annual Average),0.5,,,mg/L,
+630EWK001,"Fluoride, Dissolved",Max,MCL,Maximum Contaminant Level,2,,,mg/L,
+630EWK001,Electrical Conductivity,Max,MCL,Maximum Contaminant Level,900,,,uS/cm,
+630EWK001,"Chloride, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),4,,,mg/L,
+630EWK001,"Boron, Dissolved",Max,Annual Average,Site-specific Objective (Annual Average),0.12,,,mg/L,
+630EWK001,"Alkalinity as CaCO3, Total",Min,WQC Minimum Hardness,Water Quality Criteria (Minimum Hardness),20,,,mg/L,
+630EWK001,E. coli (Single Sample),Max,Statistical Threshold Value,Statistical Threshold Value,320,,,cfu/100mL,
+630EWK001,"Coliform, Fecal (Single Sample)",Max,Ten Percent Exceedance Value,Ten Percent Exceedance Value,40,,,cfu/100mL,
