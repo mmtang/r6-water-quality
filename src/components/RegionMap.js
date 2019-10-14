@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import boundary from '../data/r6_boundary.geojson';
 import sites from '../data/sites.csv';
 import * as d3 from 'd3';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-// import esri from 'react-leaflet';
 
 class RegionMap extends Component {
     activeStyle() {
@@ -15,6 +15,14 @@ class RegionMap extends Component {
             radius: 9
         };
     }
+    boundaryStyle() {
+        return {
+            weight: 2,
+            fillColor: '#e0ddd0',
+            fillOpacity: 0,
+            color: '#877968',
+        };
+    }
     defaultStyle() {
         return {
             color: '#fff',
@@ -23,6 +31,15 @@ class RegionMap extends Component {
             weight: 1,
             radius: 9
         };
+    }
+    drawBoundary() {
+        d3.json(boundary).then(res => {
+            const feature = res.features[0];
+            L.geoJson(feature, {
+                pane: 'boundaryPane',
+                style: this.boundaryStyle
+            }).addTo(this.map);
+        });
     }
     drawMarkers() {
         this.siteLayer = L.featureGroup().addTo(this.map);
@@ -34,7 +51,10 @@ class RegionMap extends Component {
             });
             res.forEach(site => {
                 const content = '<div class="pic-container">' + site.name + '<br />(' + site.code + ')<br/ ></div>';
-                const circle = L.circleMarker([site.lat, site.long], this.defaultStyle());
+                const circle = L.circleMarker([site.lat, site.long], {
+                    pane: 'circlePane',
+                    style: this.defaultStyle
+                });
                 circle.code = site.code;
                 circle.on('click', e => {
                     this.props.changeActiveSite(e.target.code);
@@ -45,18 +65,14 @@ class RegionMap extends Component {
     }
     componentDidMount() {
         this.map = L.map('map', {
-            center: [39.1968, -119.5224],
-            zoom: 7,
-            layers: [
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                    subdomains: 'abcd',
-                    maxZoom: 19
-                }),
-            ]
+            center: [39.4068, -119.7824],
+            zoom: 8
         });
+        const esri = require('esri-leaflet'); // required
+        esri.basemapLayer('Topographic').addTo(this.map);
         this.map.createPane('boundaryPane');
         this.map.createPane('circlePane');
+        this.drawBoundary();
         this.drawMarkers();
     }
     // this handles site changes originating from both the map and selector

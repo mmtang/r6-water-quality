@@ -2,9 +2,10 @@
 import 'react-app-polyfill/ie11'; 
 import 'react-app-polyfill/stable';
 import React, { Component } from 'react';
-import { getGraphDate, getUnique } from './Utils.js'
+import { getGraphDate, getUnique, loadImages } from './Utils.js'
 import SiteMenu from './components/SiteMenu';
 import RegionMap from './components/RegionMap';
+import SiteInfo from './components/SiteInfo';
 import sites from './data/sites.csv';
 import * as d3 from 'd3';
 import 'bootstrap';
@@ -98,18 +99,20 @@ class App extends Component {
       this.setState({
         sites: res
       });
+      loadImages();
       // initialize app view on default site
       const defaultSiteCode = '637SUS001';
       const defaultSiteObj = res[res.findIndex(site => site.code === defaultSiteCode)];
       this.loadData(defaultSiteObj);
     });
+    
   }
   render() {
     return (
       <div className="App">
         <nav className="navbar fixed-top navbar-dark bg-dark">
             <a className="navbar-brand" href="https://www.waterboards.ca.gov/" target="_blank" rel="noopener noreferrer">
-                <img className="nav-logo" src={require('./images/wb_logo.png')} alt="Water Boards Logo" />
+                <img className="nav-logo" src="./images/wb_logo.png" alt="Water Boards Logo" />
                 <div className="nav-text">Lahontan Regional Board - Water Quality Monitoring Dashboard</div>
             </a>
             <SiteMenu sites={this.state.sites} selected={this.state.selected} changeActiveSite={this.changeActiveSite} />
@@ -121,10 +124,19 @@ class App extends Component {
                     <RegionMap sites={this.state.sites} selected={this.state.selected} changeActiveSite={this.changeActiveSite} style={{height: "100vh - 68px"}} />
                 </div>
                 <div id="right" className="col-md-8">
+                    <main>
+                      <section>
+                        <div id="info-container" style={{maxWidth: "823px"}}>
+                          <SiteInfo selected={this.state.selected} />
+                        </div>
+                      </section>
+                    </main>
                     {/*}
                     <main>
                         <section>
-                            <div id="info-container" style={{maxWidth: "823px"}}><SiteInfo selected={this.state.selected} /></div>
+                            <div id="info-container" style={{maxWidth: "823px"}}>
+                              <SiteInfo selected={this.state.selected} />
+                            </div>
                         </section>
                         <section>
                             <div id="table-container" style={{maxWidth: "823px"}}><Table selected={this.state.selected} analytes={this.state.analytes} objectives={this.state.objectives} trends={this.state.trends} /></div>

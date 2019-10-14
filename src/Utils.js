@@ -35,3 +35,17 @@ export const getUnique = (data, attribute) => {
     const newList = [...uniqueSet];
     return newList;
 }
+
+export const loadImages = () => {
+    preloadImage('./images/630EWK001.jpg');
+    preloadImage('./images/631WWK001.jpg');
+    preloadImage('./images/632ECR005.jpg');
+    preloadImage('./images/633WCR002.jpg');
+    preloadImage('./images/635TRK002.jpg');
+    preloadImage('./images/637SUS001.jpg');
+}
+
+export const preloadImage = (url) => {
+    const img = new Image();
+    img.src = url;
+  }
