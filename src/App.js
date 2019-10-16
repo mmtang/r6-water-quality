@@ -6,6 +6,7 @@ import { getGraphDate, getUnique, loadImages } from './Utils.js'
 import SiteMenu from './components/SiteMenu';
 import RegionMap from './components/RegionMap';
 import SiteInfo from './components/SiteInfo';
+import Table from './components/Table';
 import sites from './data/sites.csv';
 import * as d3 from 'd3';
 import 'bootstrap';
@@ -83,7 +84,7 @@ class App extends Component {
             data: data,
             averages: averages,
             objectives: objectives,
-            analytes: analytes,
+            analytes: dataByAnalyte,
             trends: trends
         });
     });
@@ -129,6 +130,9 @@ class App extends Component {
                         <div id="info-container" style={{maxWidth: "823px"}}>
                           <SiteInfo selected={this.state.selected} />
                         </div>
+                      </section>
+                      <section>
+                        <div id="table-container" style={{maxWidth: "823px"}}><Table selected={this.state.selected} analytes={this.state.analytes} objectives={this.state.objectives} trends={this.state.trends} /></div>
                       </section>
                     </main>
                     {/*}

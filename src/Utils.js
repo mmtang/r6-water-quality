@@ -1,3 +1,39 @@
+export const analyteDict = {
+    'Phosphorus as P, Total' : 'PhosphorusAsP',
+    'Phosphorus, Total' : 'Phosphorus',
+    'Total Dissolved Solids' : 'TDS',
+    'Boron, Dissolved' : 'BoronD',
+    'Boron, Total' : 'BoronT',
+    'Chloride, Dissolved' : 'Chloride',
+    'Sulfate, Dissolved' : 'Sulfate',
+    'Nitrogen, Total (Calculated)' : 'NitrogenCalc',
+    'Turbidity, Total' : 'Turbidity',
+    'Temperature' : 'Temperature',
+    'Oxygen, Dissolved, Total' : 'OxygenDissolved',
+    'Alkalinity as CaCO3, Total' : 'Alkalinity',
+    'Oxygen, Saturation, Total': 'OxygenSaturation',
+    'Coliform, Fecal (Single Sample)' : 'ColiformFecalSingle',
+    'E. coli (Single Sample)' : 'EcoliSingle',
+    'E. coli (Geometric Mean)' : 'EcoliGM',
+    'Fluoride, Dissolved' : 'Fluoride',
+    'pH' : 'pH',
+    'Total Suspended Solids' : 'TSS',
+    'Specific Conductivity' : 'SConductivity',
+    'Electrical Conductivity' : 'EConductivity',
+    'Sodium, Dissolved' : 'Sodium',
+    'Potassium, Dissolved' : 'Potassium',
+    'Nitrogen, Total' : 'Nitrogen',
+    'Magnesium, Dissolved' : 'Magnesium',
+    'Electrical Conductivity' : 'Conductivity',
+    'Calcium, Dissolved' : 'Calcium',
+    'Salinity' : 'Salinity',
+    'OrthoPhosphate as P, Dissolved' : 'Orthophosphate',
+    'Kjeldahl Nitrogen, Total' : 'KjeldahlN',
+    'Nitrate as Nitrogen' : 'NitrateAsNitrogen',
+    'Nitrate + Nitrite as N, Dissolved' : 'NitrateNitrite',
+    'Nitrogen, Total, Total' : 'Nitrogen'
+};
+
 export const dateDict = {
     0 : [0, 16],
     1 : [1, 15],
@@ -48,4 +84,9 @@ export const loadImages = () => {
 export const preloadImage = (url) => {
     const img = new Image();
     img.src = url;
-  }
+}
+
+// rounds to two decimal places
+export const roundToTwo = (num) => {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}

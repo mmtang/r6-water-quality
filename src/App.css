@@ -85,6 +85,10 @@ select {
   padding: 15px 0 0 0;
 }
 
+#site-info-card {
+  margin-bottom: 0 !important;
+}
+
 .site-title {
   font-size: 20px;
   margin-bottom: 18px;
@@ -94,6 +98,44 @@ select {
   height: 100%;
   object-fit: cover;
   border-radius: 0;
+}
+
+#table-container {
+  padding: 15px 0 0 0;
+}
+
+#table-card {
+  overflow-x: auto;
+  font-size: 1em;
+}
+
+#table-card .card-header {
+  font-size: 1rem;
+}
+
+.table th {
+  border-top: 0px;
+}
+
+th {
+  min-width: 70px;
+}
+
+.column-analyte {
+  min-width: 275px;
+}
+
+ion-icon {
+  transform: translate(0px, 3px);
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+
+/* speed up collapse transition */
+.collapsing {
+  -webkit-transition:height .01s ease;
+   transition:height .01s ease
 }
 
 
