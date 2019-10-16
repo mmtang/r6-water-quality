@@ -66,7 +66,8 @@ class RegionMap extends Component {
     componentDidMount() {
         this.map = L.map('map', {
             center: [39.4068, -119.7824],
-            zoom: 8
+            zoom: 8,
+            preferCanvas: true
         });
         const esri = require('esri-leaflet'); // required
         esri.basemapLayer('Topographic').addTo(this.map);

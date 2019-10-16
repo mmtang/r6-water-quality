@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { analyteDict } from '../Utils.js';
+import Graph from './Graph';
 
 class GraphSection extends Component {
     render() {
@@ -17,7 +18,7 @@ class GraphSection extends Component {
                         </div>*/}
                     </div>
                 </div>
-                {/*<Graph key={analyte.id} analyte={analyte} />*/}
+                <Graph key={analyte.id} analyte={analyte} />
                 <hr />
             </div>
         ));

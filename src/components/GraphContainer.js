@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DownloadData from './DownloadData';
 import GraphSection from './GraphSection';
 import { sortIgnoreCap } from '../Utils.js';
+import * as d3 from 'd3';
 
 class GraphContainer extends Component {
     // sorts analytes and data by rank for display
@@ -53,6 +54,10 @@ class GraphContainer extends Component {
     }
     render() {
         const analytes = this.sortByRank();
+        // need to remove rather than redraw because each site has different analytes
+        // revisit and clean up
+        d3.selectAll('svg').remove();
+        d3.selectAll('.tooltip').remove();
         return (
             <div id="graph-card" className="card">
                 <div className="card-header">

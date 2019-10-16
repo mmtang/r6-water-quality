@@ -61,6 +61,18 @@ export const getGraphDate = (date, dataType) => {
     }
 }
 
+export const getMidDate = (date, dataType) => {
+    const year = date.getFullYear();
+    if (dataType === 'Annual Average') {
+        return new Date(year, 1, 1);
+    } else if (dataType === 'Monthly Mean') {
+        const monthDate = dateDict[date.getMonth()];
+        return new Date(year, monthDate[0], monthDate[1]);
+    } else {
+        return date;
+    }
+}
+
 // returns an array of unique attributes in a dataset
 // data = an array of objects, attribute = string
 export const getUnique = (data, attribute) => {

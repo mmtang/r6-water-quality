@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 html, body {
   width: 100%;
   height: 100%;
@@ -76,6 +78,12 @@ select {
   padding: 0;
 }
 
+.map-tooltip {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+
 #right {
   /* subtract navbar height; otherwise, div will go off screen */
   height: calc(100vh - 68px);
@@ -144,6 +152,31 @@ th {
 
 .analyte-title {
   font-size: 16px;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 4px 8px;
+  background-color: #1a252f;
+  color: #fff;
+  vertical-align: middle;
+  text-align: left;
+  font-family: inherit;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.axis text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(1em * 2.2);
+}
+
+.line-label, .range-label {
+  font-size: calc(1em * 1.4);
+}
+
+.axis-label {
+  display: none;
 }
 
 ion-icon {
