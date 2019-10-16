@@ -7,6 +7,7 @@ import SiteMenu from './components/SiteMenu';
 import RegionMap from './components/RegionMap';
 import SiteInfo from './components/SiteInfo';
 import Table from './components/Table';
+import GraphContainer from './components/GraphContainer';
 import sites from './data/sites.csv';
 import * as d3 from 'd3';
 import 'bootstrap';
@@ -132,24 +133,12 @@ class App extends Component {
                         </div>
                       </section>
                       <section>
-                        <div id="table-container" style={{maxWidth: "823px"}}><Table selected={this.state.selected} analytes={this.state.analytes} objectives={this.state.objectives} trends={this.state.trends} /></div>
+                          <div id="table-container" style={{maxWidth: "823px"}}><Table selected={this.state.selected} analytes={this.state.analytes} objectives={this.state.objectives} trends={this.state.trends} /></div>
+                      </section>
+                      <section>
+                          <div id="graph-container" style={{maxWidth: "823px"}}><GraphContainer data={this.state.data} averages={this.state.averages} objectives={this.state.objectives} trends={this.state.trends} /></div>
                       </section>
                     </main>
-                    {/*}
-                    <main>
-                        <section>
-                            <div id="info-container" style={{maxWidth: "823px"}}>
-                              <SiteInfo selected={this.state.selected} />
-                            </div>
-                        </section>
-                        <section>
-                            <div id="table-container" style={{maxWidth: "823px"}}><Table selected={this.state.selected} analytes={this.state.analytes} objectives={this.state.objectives} trends={this.state.trends} /></div>
-                        </section>
-                        <section>
-                            <div id="graph-container" style={{maxWidth: "823px"}}><GraphContainer data={this.state.data} averages={this.state.averages} objectives={this.state.objectives} trends={this.state.trends} /></div>
-                        </section>
-                    </main>
-                    */}
                 </div>  
             </div>
         </div>

@@ -90,3 +90,14 @@ export const preloadImage = (url) => {
 export const roundToTwo = (num) => {    
     return +(Math.round(num + "e+2")  + "e-2");
 }
+
+// sorts an array alphabetical ignoring capitalization
+export const sortIgnoreCap = (arr) => {
+    const sortedArr = arr.sort((a,b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a === b) return 0;
+        return a < b ? -1 : 1;
+    });
+    return sortedArr;
+}

@@ -17,6 +17,16 @@ p {
   line-height: 1.5;
 }
 
+.btn-secondary {
+  background-color: #707070;
+  border-color: #707070;
+}
+
+.btn-secondary:hover {
+  background-color: #1a252f;
+  border-color: #151e27;
+}
+
 select {
   -moz-box-shadow: none !important;
       -webkit-box-shadow: none !important;
@@ -73,6 +83,13 @@ select {
   overflow-y: scroll; 
 }
 
+.card-header {
+  color: #707070;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
 .card, .btn {
   border-radius: 0;
 }
@@ -109,10 +126,6 @@ select {
   font-size: 1em;
 }
 
-#table-card .card-header {
-  font-size: 1rem;
-}
-
 .table th {
   border-top: 0px;
 }
@@ -123,6 +136,14 @@ th {
 
 .column-analyte {
   min-width: 275px;
+}
+
+#graph-container {
+  padding: 15px 0;
+}
+
+.analyte-title {
+  font-size: 16px;
 }
 
 ion-icon {
