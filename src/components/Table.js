@@ -10,7 +10,7 @@ class Table extends Component {
                     <div className="card-body table-responsive table-wrapper">
                         <table className="table table-sm table-hover">
                             <thead>
-                                <tr scope="row">
+                                <tr>
                                     <th scope="col" className='column-analyte'>Analyte</th>
                                     <th scope="col" className="text-right col">Trend</th>
                                     <th scope="col" className="text-right col">Count</th>

@@ -4,7 +4,6 @@ import * as d3 from 'd3';
 
 class Graph extends Component {
     bufferX = (extent, averages) => {
-        const MS_PER_DAY = 1000 * 60 * 60 * 24;
         // convert to UNIX
         let min = extent[0].getTime();
         let max = extent[1].getTime();
@@ -32,7 +31,6 @@ class Graph extends Component {
         const timeWidth = 495 + timeMargin.left + timeMargin.right;
         const timeHeight = 275 + timeMargin.top + timeMargin.bottom;
         const analyteCode = analyteDict[this.props.analyte.name];
-        const parseDate = d3.timeParse('%m/%d/%y');
         const data = this.props.analyte.data;
         const average = this.props.analyte.average;
         const objective = this.props.analyte.objective;
@@ -132,16 +130,7 @@ class Graph extends Component {
             .attr('r', 4)
             .attr('cx', (d) => { return xScale(d.SampleDate); })
             .attr('cy', (d) => { return yScale(d.DataValue); })
-            .attr('fill', (d) => { 
-                /*
-                if (average.length > 0) {
-                    return '#4d5e6b';
-                } else {
-                    return this.getColor(d, objective); 
-                }
-                */
-                return this.getColor(d, objective); 
-            })
+            .attr('fill', (d) => { return this.getColor(d, objective); })
             .on('mouseover', (d) => {
                 const formatDate = d3.timeFormat('%b %e, %Y');
                 return tooltip
@@ -251,6 +240,8 @@ class Graph extends Component {
                     } else {
                         return red;
                     }
+                default:
+                    return gray;
             }
         } else {
             return gray;

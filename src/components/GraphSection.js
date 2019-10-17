@@ -5,7 +5,7 @@ import Graph from './Graph';
 class GraphSection extends Component {
     render() {
         return this.props.analytes.map((analyte) => (
-            <div>
+            <div key={analyteDict[analyte.name]}>
                 <h4 className="analyte-title">{analyte.name}</h4>
                 <div className="row">
                     <div className="col-12 col-md-12 col-lg-8 col-xl-9">
@@ -18,7 +18,7 @@ class GraphSection extends Component {
                         </div>*/}
                     </div>
                 </div>
-                <Graph key={analyte.id} analyte={analyte} />
+                <Graph analyte={analyte} />
                 <hr />
             </div>
         ));

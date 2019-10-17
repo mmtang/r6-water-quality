@@ -198,21 +198,83 @@ ion-icon {
   body {
       padding-top: 68px;
   }
+  .nav-text {
+      display: none;
+  }
+  .axis text {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2em;
+  }
+  .line-label, .range-label {
+      display: inline;
+      font-size: 16px;
+  }
+  .axis-label {
+      display: inline;
+      font-size: 0.8em;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  body {
+      padding-top: 68px;
+  }
+  .nav-text {
+      display: none;
+  }
+  #map-container {
+      display: block;
+  }
+  #site-pic {
+      display: block;
+  }
+  .axis text {
+      font-size: 1.4em;
+  }
+  .line-label, .range-label {
+      font-size: 0.9em;
+  }
+  .axis-label {
+      font-size: 0.9em;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  body {
+      padding-top: 68px;
+  }
   .nav-text {
       display: inline;
+  }
+  .axis text {
+      font-size: 1.8em;
+  }
+  .line-label, .range-label {
+      font-size: 1.2em;
+  }
+  .axis-label {
+      font-size: 1em;
+  }
+  .small-text {
+      line-height: 1.2em;
+      font-size: 1em;
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  body {
+      padding-top: 68px;
+  }
+  .axis text {
+      font-size: 1.2em;
+  }
+  .line-label, .range-label {
+      font-size: 0.9em;
+  }
+  .axis-label {
+      font-size: 0.8em;
+  }
 }

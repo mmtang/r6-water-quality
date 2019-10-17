@@ -75,19 +75,18 @@ class TableRow extends Component {
                  : 0;
         });
         return analytes.map((analyte) => (
-            <React.Fragment>
-                <tr scope="row" data-toggle="collapse" data-target={"." + analyteDict[analyte.name]} className="clickable" onClick={this.handleClick}>
-                    <td scope="col"><ion-icon name="arrow-dropright" alt="Click to expand/contract table row"></ion-icon>&nbsp;&nbsp;{analyte.name}</td>
-                    <td scope="col" className="text-right"><div dangerouslySetInnerHTML={{__html: this.getTrendIcon(this.props.trends[analyte.name])}} /></td>
-                    <td scope="col" className="text-right">{this.getCount(analyte.data)}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.getMean(analyte.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.getMedian(analyte.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.getMin(analyte.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.getMax(analyte.data))}</td>
-                    <td scope="col" className="text-right"><div dangerouslySetInnerHTML={{__html: this.getObjective(analyte.name, this.props.objectives)}} /></td>
+            <React.Fragment key={analyteDict[analyte.name]}>
+                <tr data-toggle="collapse" data-target={"." + analyteDict[analyte.name]} className="clickable" onClick={this.handleClick}>
+                    <td><ion-icon name="arrow-dropright" alt="Click to expand/contract table row"></ion-icon>&nbsp;&nbsp;{analyte.name}</td>
+                    <td className="text-right"><div dangerouslySetInnerHTML={{__html: this.getTrendIcon(this.props.trends[analyte.name])}} /></td>
+                    <td className="text-right">{this.getCount(analyte.data)}</td>
+                    <td className="text-right">{roundToTwo(this.getMean(analyte.data))}</td>
+                    <td className="text-right">{roundToTwo(this.getMedian(analyte.data))}</td>
+                    <td className="text-right">{roundToTwo(this.getMin(analyte.data))}</td>
+                    <td className="text-right">{roundToTwo(this.getMax(analyte.data))}</td>
+                    <td className="text-right"><div dangerouslySetInnerHTML={{__html: this.getObjective(analyte.name, this.props.objectives)}} /></td>
                 </tr>
                 <Year 
-                    key={analyte.id}
                     data={analyte.data} 
                     getCount={this.getCount}
                     getMin={this.getMin}

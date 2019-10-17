@@ -24,7 +24,6 @@ export const analyteDict = {
     'Potassium, Dissolved' : 'Potassium',
     'Nitrogen, Total' : 'Nitrogen',
     'Magnesium, Dissolved' : 'Magnesium',
-    'Electrical Conductivity' : 'Conductivity',
     'Calcium, Dissolved' : 'Calcium',
     'Salinity' : 'Salinity',
     'OrthoPhosphate as P, Dissolved' : 'Orthophosphate',

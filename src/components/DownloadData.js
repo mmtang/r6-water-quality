@@ -54,13 +54,7 @@ class DownloadData extends Component {
     ieVersion = () => {
         const ua = window.navigator.userAgent;
         const msie = ua.indexOf("MSIE ");
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-            return true;
-        }
-        else {
-            return false;
-        }
-        return false;
+        return (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) ? true : false;
     }
     render() {
         return (

@@ -23,16 +23,16 @@ class Year extends Component {
         // sort descending to show latest years first
         const sortedYears = years.sort((a, b) => b.year - a.year);
         return sortedYears.map(obj => (
-            <React.Fragment>
-                <tr scope="row" className={analyteDict[obj.analyte] + " collapse out"}>
-                    <td scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{obj.year}</td>
-                    <td scope="col" className="text-right"><ion-icon name="remove" alt="No objective displayed for year"></ion-icon></td>
-                    <td scope="col" className="text-right">{this.props.getCount(obj.data)}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.props.getMean(obj.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.props.getMedian(obj.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.props.getMin(obj.data))}</td>
-                    <td scope="col" className="text-right">{roundToTwo(this.props.getMax(obj.data))}</td>
-                    <td scope="col" className="text-right"><div dangerouslySetInnerHTML={{__html: this.props.objectiveValue}} /></td>
+            <React.Fragment key={obj.year}>
+                <tr className={analyteDict[obj.analyte] + " collapse out"}>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{obj.year}</td>
+                    <td className="text-right"><ion-icon name="remove" alt="No objective displayed for year"></ion-icon></td>
+                    <td className="text-right">{this.props.getCount(obj.data)}</td>
+                    <td className="text-right">{roundToTwo(this.props.getMean(obj.data))}</td>
+                    <td className="text-right">{roundToTwo(this.props.getMedian(obj.data))}</td>
+                    <td className="text-right">{roundToTwo(this.props.getMin(obj.data))}</td>
+                    <td className="text-right">{roundToTwo(this.props.getMax(obj.data))}</td>
+                    <td className="text-right"><div dangerouslySetInnerHTML={{__html: this.props.objectiveValue}} /></td>
                 </tr>
             </React.Fragment>
         ));
