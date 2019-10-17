@@ -8,12 +8,12 @@ import RegionMap from './components/RegionMap';
 import SiteInfo from './components/SiteInfo';
 import Table from './components/Table';
 import GraphContainer from './components/GraphContainer';
+import ReturnToTop from './components/ReturnToTop';
+import WelcomeModal from './components/WelcomeModal';
 import sites from './data/sites.csv';
 import * as d3 from 'd3';
-import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-// Place any other custom imports below so that they take precedence
-// over default styles. 
+import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 
 class App extends Component {
@@ -23,7 +23,6 @@ class App extends Component {
       averages: [],
       objectives: [],
       analytes: [],
-      // need this?
       sites: []
   }
   changeActiveSite = (siteCode) => {
@@ -107,7 +106,6 @@ class App extends Component {
       const defaultSiteObj = res[res.findIndex(site => site.code === defaultSiteCode)];
       this.loadData(defaultSiteObj);
     });
-    
   }
   render() {
     return (
@@ -140,8 +138,10 @@ class App extends Component {
                       </section>
                     </main>
                 </div>  
+                <ReturnToTop />
             </div>
         </div>
+        <WelcomeModal />
       </div>
     );
   }

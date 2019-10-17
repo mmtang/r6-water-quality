@@ -134,12 +134,19 @@ select {
   font-size: 1em;
 }
 
+/* keep these two separate */
 .table th {
   border-top: 0px;
 }
 
 th {
   min-width: 70px;
+}
+
+/* speed up collapse transition */
+.collapsing {
+  -webkit-transition:height .01s ease;
+   transition:height .01s ease
 }
 
 .column-analyte {
@@ -191,16 +198,50 @@ th {
   padding: 8px;
 }
 
+#return-icon {
+  position: relative;
+  top: 2px;
+  font-size: 28px;
+  color: #fff;
+}
+
+#return-to-top {
+  position: fixed;
+  bottom: 14px;
+  right: 28px;
+  background: rgb(0, 0, 0);
+  background: rgba(3, 71, 103, 0.8);
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+
+#return-to-top:hover {
+  background: rgb(44, 62, 80);
+}
+
+#alert-icon {
+  font-size: 22px;
+  color: #000;
+}
+
 ion-icon {
   transform: translate(0px, 3px);
   font-size: 18px;
   color: #2c3e50;
-}
-
-/* speed up collapse transition */
-.collapsing {
-  -webkit-transition:height .01s ease;
-   transition:height .01s ease
 }
 
 /* Small devices (landscape phones, 576px and up) */
