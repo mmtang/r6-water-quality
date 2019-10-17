@@ -72,6 +72,22 @@ export const getMidDate = (date, dataType) => {
     }
 }
 
+export const getTrend = (data) => {
+    if (data['p_value'] > 0.05) {
+        // fail to reject null hypothesis, statistically nonsignificant
+        return 'No Significant Trend';
+    } else {
+        // reject null hypothesis, statistically significant
+        if (data['tau'] < 0) {
+            return 'Decreasing';
+        } else if (data['tau'] > 0) {
+            return 'Increasing';
+        } else {
+            return 'No Significant Trend';
+        }
+    }
+}
+
 // returns an array of unique attributes in a dataset
 // data = an array of objects, attribute = string
 export const getUnique = (data, attribute) => {

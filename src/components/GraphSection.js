@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { analyteDict } from '../Utils.js';
 import Graph from './Graph';
+import Trend from './Trend';
+import DownloadData from './DownloadData';
 
 class GraphSection extends Component {
     render() {
@@ -12,10 +14,10 @@ class GraphSection extends Component {
                         <div id={analyteDict[analyte.name]} className="graph-wrapper"></div>
                     </div>
                     <div className="trend-box col-12 col-md-12 col-lg-4 col-xl-3">
-                        {/*<Trend key={analyte.id} analyte={analyte.name} trend={this.props.trends[analyte.name]} />
+                        <Trend analyte={analyte.name} trend={this.props.trends[analyte.name]} />
                         <div className="download-wrapper float-right">
-                            <DownloadData key={analyte.id} data={analyte.data} label="Download data" />
-                        </div>*/}
+                            <DownloadData data={analyte.data} label="Download data" />
+                        </div>
                     </div>
                 </div>
                 <Graph analyte={analyte} />

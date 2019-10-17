@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { analyteDict, roundToTwo } from '../Utils.js';
+import { analyteDict, getTrend, roundToTwo } from '../Utils.js';
 import Year from './Year';
 import * as d3 from 'd3';
 
@@ -30,19 +30,8 @@ class TableRow extends Component {
             return '<ion-icon name="remove" alt="No objective"></ion-icon>';
         }
     }
-    getTrend = (data) => {
-        if (data['p_value'] > 0.05) {
-            // fail to reject null hypothesis, statistically nonsignificant
-            return 'No Significant Trend';
-        } else {
-            // reject null hypothesis, statistically significant
-            return (data['tau'] < 0) ? 'Decreasing'
-                : (data['tau'] > 0) ? 'Increasing'
-                : 'No Significant Trend'; 
-        }
-    }
     getTrendIcon = (trendObj) => {
-        const trend = this.getTrend(trendObj);
+        const trend = getTrend(trendObj);
         switch(trend) {
             case 'No Significant Trend':
                 return '<ion-icon name="remove" alt="No significant trend"></ion-icon>';

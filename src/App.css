@@ -179,19 +179,29 @@ th {
   display: none;
 }
 
+.trend-box {
+  min-width: 165px;
+}
+
+.trend-card {
+  text-align: center;
+}
+
+.download-wrapper {
+  padding: 8px;
+}
+
 ion-icon {
   transform: translate(0px, 3px);
   font-size: 18px;
   color: #2c3e50;
 }
 
-
 /* speed up collapse transition */
 .collapsing {
   -webkit-transition:height .01s ease;
    transition:height .01s ease
 }
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
