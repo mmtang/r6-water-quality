@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/r6-water-quality/static/css/main.085e2a57.chunk.css",
+    "main.js": "/r6-water-quality/static/js/main.bcc35ed4.chunk.js",
+    "main.js.map": "/r6-water-quality/static/js/main.bcc35ed4.chunk.js.map",
+    "runtime-main.js": "/r6-water-quality/static/js/runtime-main.ddb93b7d.js",
+    "runtime-main.js.map": "/r6-water-quality/static/js/runtime-main.ddb93b7d.js.map",
+    "static/css/2.441e21e3.chunk.css": "/r6-water-quality/static/css/2.441e21e3.chunk.css",
+    "static/js/2.23b27ea4.chunk.js": "/r6-water-quality/static/js/2.23b27ea4.chunk.js",
+    "static/js/2.23b27ea4.chunk.js.map": "/r6-water-quality/static/js/2.23b27ea4.chunk.js.map",
+    "index.html": "/r6-water-quality/index.html",
+    "precache-manifest.207c209c74771dbb138e691bb2f7a420.js": "/r6-water-quality/precache-manifest.207c209c74771dbb138e691bb2f7a420.js",
+    "service-worker.js": "/r6-water-quality/service-worker.js",
+    "static/css/2.441e21e3.chunk.css.map": "/r6-water-quality/static/css/2.441e21e3.chunk.css.map",
+    "static/css/main.085e2a57.chunk.css.map": "/r6-water-quality/static/css/main.085e2a57.chunk.css.map",
+    "static/media/r6_boundary.geojson": "/r6-water-quality/static/media/r6_boundary.8eb17952.geojson",
+    "static/media/sites.csv": "/r6-water-quality/static/media/sites.a27f406d.csv"
+  }
+}
