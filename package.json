@@ -2,6 +2,7 @@
   "name": "r6-wq-dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mmtang.github.io/r6-water-quality",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "d3": "^5.12.0",
