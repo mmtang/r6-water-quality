@@ -1,9 +1,7 @@
-# Lahontan Regional Board - Water Quality Monitoring Dashboard
+# Region 6 - Water Quality Monitoring Dashboard
 
-**Author: Michelle Tang**<br>
-Organization: California State Water Resources Control Board, Office of Information Management and Analysis
-
-![Screenshot](./src/images/screenshot.png)
+- Author: Michelle Tang
+- Organization: California State Water Resources Control Board, Office of Information Management and Analysis
 
 ## About
 
