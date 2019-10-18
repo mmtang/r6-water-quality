@@ -88,17 +88,6 @@ export const getTrend = (data) => {
     }
 }
 
-// returns an array of unique attributes in a dataset
-// data = an array of objects, attribute = string
-export const getUnique = (data, attribute) => {
-    const uniqueSet = new Set();
-    data.forEach(res => {
-        uniqueSet.add(res[attribute]);
-    });
-    const newList = [...uniqueSet];
-    return newList;
-}
-
 export const loadImages = () => {
     preloadImage('./images/630EWK001.jpg');
     preloadImage('./images/631WWK001.jpg');

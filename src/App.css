@@ -63,7 +63,7 @@ select {
 }
 
 #map-container {
-  display: block;
+  display: none;
   padding: 0;
   border-right: 1px solid rgba(0,0,0,.125);
 }
@@ -120,6 +120,7 @@ select {
 }
 
 #site-pic {
+  display: none;
   height: 100%;
   object-fit: cover;
   border-radius: 0;
@@ -155,6 +156,10 @@ th {
 
 #graph-container {
   padding: 15px 0;
+}
+
+.graph-wrapper {
+  padding: 10px 0 15px 0;
 }
 
 .analyte-title {
@@ -194,6 +199,14 @@ th {
   text-align: center;
 }
 
+small {
+  font-size: 82%;
+}
+
+.small-text {
+  line-height: 1.1em;
+}
+
 .download-wrapper {
   padding: 8px;
 }
@@ -218,7 +231,6 @@ th {
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   border-radius: 35px;
-  display: block;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
@@ -258,7 +270,7 @@ ion-icon {
   }
   .line-label, .range-label {
       display: inline;
-      font-size: 16px;
+      font-size: 12px;
   }
   .axis-label {
       display: inline;
@@ -284,7 +296,7 @@ ion-icon {
       font-size: 1.4em;
   }
   .line-label, .range-label {
-      font-size: 0.9em;
+      font-size: 1em;
   }
   .axis-label {
       font-size: 0.9em;

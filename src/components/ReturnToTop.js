@@ -3,7 +3,10 @@ import $ from 'jquery';
 
 class ReturnToTop extends Component {
     handleClick = () => {
-        $('body, html, #right').scrollTop(0);
+        this.scrollToTop();
+    }
+    scrollToTop = () => {
+        $('body, html, #right').animate({ scrollTop: 0 }, 'slow');
     }
     render() {
         return (

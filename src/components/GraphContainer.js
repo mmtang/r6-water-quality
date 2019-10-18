@@ -30,7 +30,7 @@ class GraphContainer extends Component {
         const analyte1List = sortIgnoreCap(Array.from(analyte1Set));
         const analyte2List = sortIgnoreCap(Array.from(analyte2Set));
         const analyte3List = sortIgnoreCap(Array.from(analyte3Set));
-        const analyteList = analyte1List.concat(analyte2List, analyte3List);
+        const analyteList = [...analyte1List, ...analyte2List, ...analyte3List];
         // filter data by analyte
         const analytes = [];
         analyteList.forEach(analyte => {

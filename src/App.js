@@ -2,7 +2,7 @@
 import 'react-app-polyfill/ie11'; 
 import 'react-app-polyfill/stable';
 import React, { Component } from 'react';
-import { getGraphDate, getUnique, loadImages } from './Utils.js'
+import { getGraphDate, loadImages } from './Utils.js'
 import SiteMenu from './components/SiteMenu';
 import RegionMap from './components/RegionMap';
 import SiteInfo from './components/SiteInfo';
@@ -12,6 +12,7 @@ import ReturnToTop from './components/ReturnToTop';
 import WelcomeModal from './components/WelcomeModal';
 import sites from './data/sites.csv';
 import * as d3 from 'd3';
+import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
@@ -65,9 +66,10 @@ class App extends Component {
             res.Lower = +res.Lower;
         });
         // organize data by analyte
-        const analytes = getUnique(data, 'Analyte');
+        const analytes = data.map(rec => rec.Analyte)
+        const uniqueAnalytes = [...new Set(analytes)];
         const dataByAnalyte = [];
-        analytes.forEach(analyte => {
+        uniqueAnalytes.forEach(analyte => {
             const analyteData = data.filter(res => res.Analyte === analyte),
                   analyteAverage = averages.filter(res => res.Analyte === analyte),
                   analyteObjective = objectives.filter(res => res.Analyte === analyte);
@@ -101,6 +103,7 @@ class App extends Component {
         sites: res
       });
       loadImages();
+      $('body, html, #right').scrollTop();
       // initialize app view on default site
       const defaultSiteCode = '637SUS001';
       const defaultSiteObj = res[res.findIndex(site => site.code === defaultSiteCode)];
