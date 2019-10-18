@@ -250,6 +250,10 @@ small {
   color: #000;
 }
 
+#data-center-logo {
+  padding: 0 10px 15px 0;
+}
+
 ion-icon {
   transform: translate(0px, 3px);
   font-size: 18px;
