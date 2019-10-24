@@ -1,7 +1,7 @@
 # Region 6 - Water Quality Monitoring Dashboard
 
 - Author: Michelle Tang
-- Organization: California State Water Resources Control Board, Office of Information Management and Analysis
+- Agency: California State Water Resources Control Board, Office of Information Management and Analysis
 
 ## About
 
@@ -15,7 +15,7 @@ To clone and run this application, you will need [Node.js](https://nodejs.org/en
 # clone this repository
 $ git clone https://github.com/mmtang/r6-water-quality.git
 
-# enter the cloned repository
+# enter the repository
 $ cd r6-water-quality
 
 # run the app
@@ -34,7 +34,3 @@ This application uses the following open source packages:
 - Leaflet (https://leafletjs.com/)
 - Esri-Leaflet (https://esri.github.io/esri-leaflet/)
 - Ionicons (https://ionicons.com/)
-
-## License
-
-GNU GPL v3
