@@ -1,6 +1,6 @@
 # Region 6 - Water Quality Monitoring Dashboard
 
-- Author: Michelle Tang
+- Author: Michelle Tang (https://github.com/mmtang/r6-water-quality)
 - Agency: California State Water Resources Control Board, Office of Information Management and Analysis
 
 ## About
