@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87f149897407c54001e2f598c18aa250",
+    "revision": "71b7f9778fcff1986c1362ecc22844d1",
     "url": "/r6-water-quality/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/r6-water-quality/static/css/2.441e21e3.chunk.css"
   },
   {
-    "revision": "3b92b194496202af58b5",
+    "revision": "3b5d749739d21a58a87c",
     "url": "/r6-water-quality/static/css/main.085e2a57.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/r6-water-quality/static/js/2.23b27ea4.chunk.js"
   },
   {
-    "revision": "3b92b194496202af58b5",
-    "url": "/r6-water-quality/static/js/main.bcc35ed4.chunk.js"
+    "revision": "3b5d749739d21a58a87c",
+    "url": "/r6-water-quality/static/js/main.8aa7f788.chunk.js"
   },
   {
     "revision": "bc31d9591675108b8ef0",
