@@ -1,5 +1,4 @@
 // Polyfill must be the first lines in src/index.js
-import 'react-app-polyfill/ie11'; 
 import 'react-app-polyfill/stable';
 import React, { Component } from 'react';
 import { getGraphDate, loadImages } from './Utils.js'
