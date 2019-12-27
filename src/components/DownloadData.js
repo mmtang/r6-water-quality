@@ -6,12 +6,18 @@ class DownloadData extends Component {
         const fileName = 'R6_Download_' + Date.now() + '.csv';
         const fileData = this.formatData(data);
         const csvContent = this.convertToCSV(fileData);
-        if (this.ieVersion()) {
-            let IEwindow = window.open();
-            IEwindow.document.write(csvContent);
-            IEwindow.document.close();
-            IEwindow.document.execCommand('SaveAs', true, fileName);
-            IEwindow.close();
+        if (this.checkEdge()) {
+            let blob = new Blob([csvContent], { type: 'data:text/csv;charset=utf-8;' });
+            const linkElement = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            linkElement.setAttribute('href', url);
+            linkElement.setAttribute('download', fileName);
+            const clickEvent = new MouseEvent('click', {
+                'view': window,
+                'bubbles': true,
+                'cancelable': false
+            });
+            linkElement.dispatchEvent(clickEvent);
         } else {
             let csv = document.createElement('a');
             csv.href = 'data:text/csv;charset=utf-8,' +  encodeURIComponent(csvContent);
@@ -51,10 +57,9 @@ class DownloadData extends Component {
         csvString += header + '\r\n' + body;
         return csvString;
     }
-    ieVersion = () => {
+    checkEdge = () => {
         const ua = window.navigator.userAgent;
-        const msie = ua.indexOf("MSIE ");
-        return (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) ? true : false;
+        return (/edge|msie\s|trident\//i.test(ua)) ? true : false;
     }
     render() {
         return (
