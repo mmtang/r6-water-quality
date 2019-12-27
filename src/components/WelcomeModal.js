@@ -21,7 +21,7 @@ class WelcomeModal extends Component {
                             <a href="https://github.com/CAWaterBoardDataCenter" target="_blank" rel="noopener noreferrer"><img id="data-center-logo" className="img-fluid" src="images/data_center_logo.png" alt="Water Boards Data Center logo" /></a>
                         </div>
                         <p><strong>This application is in early development.</strong> It may change at any time without prior notification. All data provided are provisional and should not be used for any particular purpose other than general reference. </p>
-                        <p>This application is best viewed in Firefox, Chrome, or Safari. Support for other browsers, including Internet Explorer, is coming soon.</p>
+                        <p>This application is best viewed in Firefox, Chrome, or Safari. Internet Explorer is not supported.</p>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
