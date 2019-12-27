@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/r6-water-quality/precache-manifest.3e80871a32b49bcb83428f68932e67dd.js"
+  "/r6-water-quality/precache-manifest.f48c54fcde223ebee5640bcfce9d9dc8.js"
 );
 
 self.addEventListener('message', (event) => {
