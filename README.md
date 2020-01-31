@@ -33,4 +33,4 @@ This application uses the following open source packages:
 - D3.js (https://d3js.org/)
 - Leaflet (https://leafletjs.com/)
 - Esri-Leaflet (https://esri.github.io/esri-leaflet/)
-- Ionicons (https://ionicons.com/)
+- Material Design Iconic Font (https://zavoloklom.github.io/material-design-iconic-font/)

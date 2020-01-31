@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { analyteDict, getTrend, roundToTwo } from '../Utils.js';
+import { analyteDict, roundToTwo } from '../Utils.js';
 import Year from './Year';
+import TableTrendIcon from './TableTrendIcon';
 import * as d3 from 'd3';
 
 class TableRow extends Component {
@@ -27,32 +28,27 @@ class TableRow extends Component {
         if (filtered.length > 0) {
             return filtered[0].Value;
         } else {
-            return '<ion-icon name="remove" alt="No objective"></ion-icon>';
-        }
-    }
-    getTrendIcon = (trendObj) => {
-        const trend = getTrend(trendObj);
-        switch(trend) {
-            case 'No Significant Trend':
-                return '<ion-icon name="remove" alt="No significant trend"></ion-icon>';
-            case 'Decreasing':
-                return '<ion-icon name="arrow-round-down" alt="Decreasing trend"></ion-icon>';
-            case 'Increasing':
-                return '<ion-icon name="arrow-round-up" alt="Increasing trend"></ion-icon>';
-            default:
-                return '<ion-icon name="help" alt="Error"></ion-icon>';
+            return '&#8212';
         }
     }
     handleClick = (event) => {
         this.toggleArrow(event.target);
     }
     toggleArrow = (target) => {
+        const caretRight = 'zmdi-caret-right';
+        const caretDown = 'zmdi-caret-down';
         const row = target.closest('tr');
         const firstColumn = row.childNodes[0];
         const icon = firstColumn.childNodes[0];
-        icon.name = (icon.name === 'arrow-dropright') ? 'arrow-dropdown'
-            : (icon.name === 'arrow-dropdown') ? 'arrow-dropright'
-            : 'help';
+        if (icon.classList.contains(caretRight)) {
+            icon.classList.remove(caretRight);
+            icon.classList.add(caretDown);
+        } else if (icon.classList.contains(caretDown)) {
+            icon.classList.remove(caretDown);
+            icon.classList.add(caretRight);
+        } else {
+            icon.classList.add('zmdi-help');
+        }
     }
     render() {
         // sort analytes alphabetical
@@ -66,8 +62,8 @@ class TableRow extends Component {
         return analytes.map((analyte) => (
             <React.Fragment key={analyteDict[analyte.name]}>
                 <tr data-toggle="collapse" data-target={"." + analyteDict[analyte.name]} className="clickable" onClick={this.handleClick}>
-                    <td><ion-icon name="arrow-dropright" alt="Click to expand/contract table row"></ion-icon>&nbsp;&nbsp;{analyte.name}</td>
-                    <td className="text-right"><div dangerouslySetInnerHTML={{__html: this.getTrendIcon(this.props.trends[analyte.name])}} /></td>
+                    <td><i className="zmdi zmdi-caret-right zmdi-hc-lg" alt="Click to expand/collapse table row"></i>&nbsp;&nbsp;{analyte.name}</td>
+                    <td className="text-right"><TableTrendIcon analyte={analyte.name} trends={this.props.trends} /></td>
                     <td className="text-right">{this.getCount(analyte.data)}</td>
                     <td className="text-right">{roundToTwo(this.getMean(analyte.data))}</td>
                     <td className="text-right">{roundToTwo(this.getMedian(analyte.data))}</td>

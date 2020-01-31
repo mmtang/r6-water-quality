@@ -26,7 +26,7 @@ class Year extends Component {
             <React.Fragment key={obj.year}>
                 <tr className={analyteDict[obj.analyte] + " collapse out"}>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{obj.year}</td>
-                    <td className="text-right"><ion-icon name="remove" alt="No objective displayed for year"></ion-icon></td>
+                    <td className="text-right"><i className="zmdi zmdi-minus zmdi-hc-lg"></i></td>
                     <td className="text-right">{this.props.getCount(obj.data)}</td>
                     <td className="text-right">{roundToTwo(this.props.getMean(obj.data))}</td>
                     <td className="text-right">{roundToTwo(this.props.getMedian(obj.data))}</td>

@@ -14,7 +14,7 @@ class WelcomeModal extends Component {
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title"><ion-icon id="alert-icon" name="alert" alt="Attention icon"></ion-icon>&nbsp;&nbsp;Disclaimer</h5>
+                        <h5 className="modal-title"><i id="alert-icon" class="zmdi zmdi-alert-circle" alt="Attention icon"></i>&nbsp;&nbsp;Disclaimer</h5>
                     </div>
                     <div className="modal-body">
                         <div className="text-center">
@@ -22,6 +22,7 @@ class WelcomeModal extends Component {
                         </div>
                         <p><strong>This application is in early development.</strong> It may change at any time without prior notification. All data provided are provisional and should not be used for any particular purpose other than general reference. </p>
                         <p>This application is best viewed in Firefox, Chrome, or Safari. Internet Explorer is not supported.</p>
+                        <p>If you have any questions, please contact the <a href="mailto:swamp@waterboards.ca.gov">Surface Water Ambient Monitoring Program</a>.</p>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
